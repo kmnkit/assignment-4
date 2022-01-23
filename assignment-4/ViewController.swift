@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    private var currentNumber: Int = 0 {
+        didSet {
+            valueLabel.text = "\(currentNumber)"
+        }
     }
 
+    @IBOutlet weak var valueLabel: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
+    @IBAction func tapPlusOneButton(_ sender: UIButton) {
+        currentNumber += 1
+    }
+    
+    @IBAction func tapClearButton(_ sender: UIButton) {
+        currentNumber = 0
+    }
 }
 
