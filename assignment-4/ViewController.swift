@@ -10,7 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     private var currentNumber: Int = 0 {
         didSet {
-            valueLabel.text = "\(currentNumber)"
+            DispatchQueue.main.async {
+                self.valueLabel.text = "\(self.currentNumber)"
+            }
         }
     }
 
