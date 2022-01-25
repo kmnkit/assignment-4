@@ -16,10 +16,7 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var valueLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    @IBOutlet private weak var valueLabel: UILabel!
 
     @IBAction func tapPlusOneButton(_ sender: UIButton) {
         currentNumber += 1
@@ -29,4 +26,3 @@ class ViewController: UIViewController {
         currentNumber = 0
     }
 }
-
